@@ -1,0 +1,19 @@
+db.Products.insertMany(
+[
+    {
+        "Name": "Asus",
+        "Category": "Computers",
+        "Summary": "Summary",
+        "Description": "Description",
+        "ImageFile": "imageFile",
+        "Price": 54.82
+    },
+    {
+        "Name": "HP",
+        "Category": "Computers",
+        "Summary": "Summary",
+        "Description": "Description",
+        "ImageFile": "imageFile",
+        "Price": 90.82
+    }
+])
