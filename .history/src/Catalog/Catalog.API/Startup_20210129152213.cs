@@ -1,7 +1,3 @@
-using Catalog.API.Data;
-using Catalog.API.Data.Interfaces;
-using Catalog.API.Repositories;
-using Catalog.API.Repositories.Interfaces;
 using Catalog.API.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,11 +24,8 @@ namespace Catalog.API
             services.AddControllers();
 
             services.Configure<CatalogDatabaseSettings>(Configuration.GetSection(nameof(CatalogDatabaseSettings)));
-
+            
             services.AddSingleton<ICatalogDatabaseSettings>(sp => sp.GetRequiredService<IOptions<ICatalogDatabaseSettings>>().Value);
-
-            services.AddTransient<ICatalogContext, CatalogContext>();
-            services.AddTransient<IProductRepository, ProductRepository>();
 
             services.AddSwaggerGen(c =>
             {
