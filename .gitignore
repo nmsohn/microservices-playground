@@ -435,3 +435,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 .vscode/**
+.history/**
+.idea/**
